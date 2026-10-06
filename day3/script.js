@@ -10,6 +10,12 @@ function searchNotes(word) {
     note.text.toLowerCase().includes(word.toLowerCase())
   );
 }
+console.log(searchNotes("JavaScript"));
+// Expected: [{ id: 4, text: "Revise JavaScript arrays", category: "study" }]
+
+console.log(searchNotes("pizza"));
+// Expected: []
+
 function longestNote() {
   if (notes.length === 0) {
     return null;
@@ -26,7 +32,7 @@ function longestNote() {
   return longest;
 }
 const savedNotes = notes;
-notes = [];
+
 //Expected: {id: 3, text: 'Email the project report to Grace', category: 'work'}
 console.log(longestNote());
 notes = [];
